@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CBT Training</title>
+    <style>
+        .form{
+           
+            margin: auto;
+            text-align: left;
+            font-family: arial;
+            }
+     </style>
+    <script type="text/javascript" >
+        function LoadTech()
+        {
+            var tech = ["Select","Big Data", "Ai", "ML", "IoT", "Cloud"];
+            var list = document.getElementById("lstTech");
+            for (var t in tech)
+            {
+                var myOption = document.createElement("option");
+                myOption.text = tech[t];
+                myOption.value = tech[t];
+                list.add(myOption);
+            }
+            
+        }
+        var cprice;
+        function setPrice()
+        {
+            price = document.getElementById("list").value;
+            var elem1 = document.getElementById("amount");
+            elem1.value = parseInt(price);
+            var o=document.getElementById("tamount");
+            o.value=parseInt(price);
+        }
+        
+        function a1()
+        {
+            var cp=document.getElementById("tamount");
+             prices=document.getElementById("tamount").value; 
+            if(b1.checked==true)
+            {
+               
+                var price1 = document.getElementById("b1").value;
+                
+                cp.value=parseInt(prices)+parseInt(price1);
+            }
+            else
+            {
+                cp.value=parseInt(prices)-parseInt(b1.value);            }
+        }
+            
+            function a2()
+            {
+                var cp=document.getElementById("tamount");
+             prices=parseInt(document.getElementById("tamount").value); 
+            if(b2.checked==true)
+            {
+                var price2 = document.getElementById("b2").value;
+                
+                cp.value= parseInt(prices)+parseInt(price2); ;
+            }
+            else
+            {
+                cp.value=parseInt(prices)-parseInt(b2.value);            }
+            }
+
+            function a3()
+            {
+                var cp=document.getElementById("tamount");
+             prices=document.getElementById("tamount").value; 
+            if(b3.checked==true)
+            {
+                 var price3= document.getElementById("b3").value
+                cp.value = parseInt(prices)+parseInt(price3);
+            }
+            else
+            {
+                cp.value=parseInt(prices)-parseInt(b3.value);
+            }
+            }
+            if(b1.checked&&b2.checked&b3.checked==true)
+            {
+                var cp=document.getElementById("tamount");
+             prices=document.getElementById("list").value; 
+             cp.value=  perseInt(b1.value)+parseInt(b2.value)+parseInt(b3.value) 
+            }
+        
+        </script>
+</head>
+
+<body text="Black", onload="LoadTech()">
+    <h2 text-align="Center"> CBT Training </h2>
+    
+    <br>
+    <div class="form">
+        <form action="" method="post">
+            Employee ID :  C-1 <input id="id" type="number" required name="number" placeholder="ID"> <br> <br>
+            Employee Name :   <input id="name" type="text" required name="name" placeholder="First name">
+            <br> <br>
+            Contact Number :  +91 <input id="phn" type="number" required name="number" placeholder="Phone"> <br> <br>
+            E-mail:  <input type="email" required name="email" placeholder="E-mail"> <br> <br>
+          
+            Technology <select id="lstTech"> </select><br><br>
+            Course : <br>
+                            <select id="list" onchange="setPrice()">
+                                <option value="2000">C#</option>
+                                <option value="3000">R</option>
+                                <option value="4000">Java</option>
+                                <option value="5000">Python</option>
+                            </select>
+           
+
+            Preferred Date :<br> <br>
+            Start Date : <input type="date" required name=" sdate"/><br/>
+            End Date : <input type="date" required name=" edate"/>
+            <br> <br>
+            Other Facilities : (Check If you are Intrested)
+            <br> <br> Virtual Lab : <input id="b1" type="checkbox" name="check" value="500" onchange="a1()"/>
+            <br> <br> Online Quiz : <input id="b2" type="checkbox" name="check" value="600" onchange="a2()" />
+            <br><br> Online Instructor :<input id="b3" type="checkbox" name="check" value="700" onchange="a3()"/>
+            <br><br>
+            
+            <br />Amount:<input type="text" id="amount" readonly/>
+
+            <br />TotalAmount:<input type="text" id="tamount" readonly/>
+    
+            <input type="button"  value="submit" onclick=""/>
+        </form>
+    </div>
+
+
+</body>
+</html>
