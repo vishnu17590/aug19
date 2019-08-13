@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<flipkart>
+  <cart user="vishnu"/>
+    <CartId>123 </CartId>
+      <Item>
+        <ItemId>01</ItemId>
+        <Name>poloshirt</Name>
+        <Price>1999</Price>
+        <Qty>2</Qty>
+      </Item>
+      <Item>
+        <ItemId>02</ItemId>
+        <Name>tonyJeans</Name>
+        <Price>2999</Price>
+        <Qty>3</Qty>
+      </Item>
+  <cart user="vardhan"/>
+    <CartId>526</CartId>
+      <Item>
+        <ItemId>03</ItemId>
+        <Name>jerkin</Name>
+        <Price>3500</Price>
+        <Qty>2</Qty>
+      </Item>
+      <Item>
+        <ItemId>04</ItemId>
+        <Name>gymwear</Name>
+        <Price>1700</Price>
+        <Qty>4</Qty>
+      </Item>
+      <Item>
+        <ItemId>05</ItemId>
+        <Name>sunglasses</Name>
+        <Price>1199</Price>
+        <Qty>1</Qty>
+      </Item>
+</flipkart>
